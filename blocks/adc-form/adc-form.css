@@ -3,12 +3,12 @@
   width: 100%;
 }
 
-.adc-form .o-form-container__wrapper {
+.adc-form .o-form-container-wrapper {
   padding: 2rem;
   background: var(--color-background, #fff);
 }
 
-.adc-form .o-form-container__outer {
+.adc-form .o-form-container-outer {
   max-width: 640px;
   margin: 0 auto;
 }
@@ -26,7 +26,7 @@
   color: var(--color-text, #1d1d1d);
 }
 
-.adc-form .a-input-field--required {
+.adc-form .a-input-field-required {
   color: #c00;
   margin-left: 0.2rem;
 }
@@ -61,7 +61,7 @@
 }
 
 /* ─── Error message ──────────────────────────────────────────────────────── */
-.adc-form .a-input-field--text-require {
+.adc-form .a-input-field-text-require {
   display: none;
   align-items: center;
   gap: 0.25rem;
@@ -71,7 +71,7 @@
 }
 
 /* ─── Buttons ────────────────────────────────────────────────────────────── */
-.adc-form .o-form-container__buttons {
+.adc-form .o-form-container-buttons {
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
@@ -87,22 +87,22 @@
   transition: background 0.15s ease, opacity 0.15s ease;
 }
 
-.adc-form .abt-btn--primary {
+.adc-form .abt-btn-primary {
   background: var(--color-link, #0057b8);
   color: #fff;
 }
 
-.adc-form .abt-btn--primary:hover {
+.adc-form .abt-btn-primary:hover {
   background: var(--color-link-hover, #004494);
 }
 
-.adc-form .abt-btn--primary:disabled {
+.adc-form .abt-btn-primary:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
 /* ─── Success / Error messages ───────────────────────────────────────────── */
-.adc-form .o-form-container__success-msg {
+.adc-form .o-form-container-success-msg {
   margin-top: 1rem;
   padding: 1rem;
   background: #edfbe4;
@@ -112,7 +112,7 @@
   font-weight: 500;
 }
 
-.adc-form .o-form-container__error-msg {
+.adc-form .o-form-container-error-msg {
   margin-top: 1rem;
   padding: 1rem;
   background: #fdecea;
@@ -124,11 +124,11 @@
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (width <= 767px) {
-  .adc-form .o-form-container__wrapper {
+  .adc-form .o-form-container-wrapper {
     padding: 1rem;
   }
 
-  .adc-form .o-form-container__buttons {
+  .adc-form .o-form-container-buttons {
     flex-direction: column;
   }
 

@@ -30,7 +30,7 @@ function buildHiddenInput(name, value) {
 // ─── Validation ───────────────────────────────────────────────────────────────
 
 function validateField(input) {
-  const errorEl = input.closest('.a-input-field')?.querySelector('.a-input-field--text-require');
+  const errorEl = input.closest('.a-input-field')?.querySelector('.a-input-field-text-require');
   const value = input.value?.trim();
   const { required } = input;
   const { regex } = input.dataset;
@@ -151,7 +151,7 @@ function buildInputField({
     const labelEl = document.createElement('label');
     labelEl.className = 'form-label a-input-label';
     labelEl.htmlFor = id;
-    labelEl.innerHTML = `<span class="a-input-field__label">${label}</span>${required ? '<span class="a-input-field--required">*</span>' : ''}`;
+    labelEl.innerHTML = `<span class="a-input-field-label">${label}</span>${required ? '<span class="a-input-field-required">*</span>' : ''}`;
     group.append(labelEl);
   }
 
@@ -185,7 +185,7 @@ function buildInputField({
   // Error message container
   if (required || regex) {
     const errorEl = document.createElement('div');
-    errorEl.className = 'form-text a-input-field--text-require';
+    errorEl.className = 'form-text a-input-field-text-require';
     errorEl.style.display = 'none';
     errorEl.setAttribute('aria-live', 'polite');
     errorEl.innerHTML = '<em class="abt-icon abt-icon-notice-circle-outline"></em><span></span>';
@@ -200,7 +200,7 @@ function buildInputField({
 
 function buildForm(config, fields) {
   const form = document.createElement('form');
-  form.className = 'o-form-container__main-form';
+  form.className = 'o-form-container-main-form';
   form.noValidate = true;
 
   const fieldContainer = document.createElement('div');
@@ -218,11 +218,11 @@ function buildForm(config, fields) {
 
   // Buttons row
   const btnRow = document.createElement('div');
-  btnRow.className = 'o-form-container__buttons d-flex';
+  btnRow.className = 'o-form-container-buttons d-flex';
 
   const submitBtn = document.createElement('button');
   submitBtn.type = 'submit';
-  submitBtn.className = 'cmp-button abt-btn abt-btn--primary';
+  submitBtn.className = 'cmp-button abt-btn abt-btn-primary';
   submitBtn.textContent = config.submitLabel || 'Submit';
 
   btnRow.append(submitBtn);
@@ -230,12 +230,12 @@ function buildForm(config, fields) {
 
   // Messages
   const successEl = document.createElement('div');
-  successEl.className = 'o-form-container__success-msg';
+  successEl.className = 'o-form-container-success-msg';
   successEl.setAttribute('role', 'alert');
   successEl.style.display = 'none';
 
   const errorEl = document.createElement('div');
-  errorEl.className = 'o-form-container__error-msg';
+  errorEl.className = 'o-form-container-error-msg';
   errorEl.setAttribute('role', 'alert');
   errorEl.style.display = 'none';
 
@@ -330,10 +330,10 @@ export default function decorate(block) {
   container.className = 'o-form-container';
 
   const wrapper = document.createElement('div');
-  wrapper.className = 'o-form-container__wrapper';
+  wrapper.className = 'o-form-container-wrapper';
 
   const outer = document.createElement('div');
-  outer.className = 'o-form-container__outer';
+  outer.className = 'o-form-container-outer';
 
   const {
     form, successEl, errorEl, submitBtn,
