@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADC Blocks Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background: #f5f5f5; }
+        .test-section { margin: 2rem 0; padding: 1rem; border: 1px solid #ccc; background: white; }
+        .test-section h2 { color: #0055cc; margin: 0 0 1rem 0; }
+        .block { min-height: 100px; background: #fafafa; border: 1px dashed #999; padding: 1rem; }
+        .error { color: red; font-weight: bold; }
+        .success { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>ADC Blocks Test Page</h1>
+        
+        <div class="test-section">
+            <h2>Logo Block (WebU Markup Match)</h2>
+            <div class="adc-logo block">
+                <div><img src="https://picsum.photos/seed/adc-logo-block/240/80" alt="Abbott logo"></div>
+                <div>Abbott logo</div>
+                <div>https://www.abbott.com</div>
+                <div>_blank</div>
+                <div>true</div>
+                <div>logo-block-sample</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Image Block (WebU v1 Match)</h2>
+            <div class="adc-image block">
+                <div><img src="https://picsum.photos/seed/adc-image-desktop/1200/640" alt="Desktop sample image"></div>
+                <div><img src="https://picsum.photos/seed/adc-image-tablet/900/520" alt="Tablet sample image"></div>
+                <div><img src="https://picsum.photos/seed/adc-image-mobile/600/720" alt="Mobile sample image"></div>
+                <div>Image alt text from authored content</div>
+                <div>false</div>
+                <div>Image caption from AEM dialog</div>
+                <div>false</div>
+                <div>https://www.abbott.com</div>
+                <div>_blank</div>
+                <div>true</div>
+                <div>adc-image-sample</div>
+                <div>image--align-center image--border-radius</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Inline Text Title Block (WebU v9 Match)</h2>
+            <div class="adc-inline-text-title block">
+                <div><span class="hero-h1-desktop-regular">ADC inline text title with <sup>TM</sup> parity</span></div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Link Block (WebU v1 Match)</h2>
+            <div class="adc-link block">
+                <div>Learn more about glucose trends</div>
+                <div>_blank</div>
+                <div>https://www.abbott.com</div>
+                <div>true</div>
+                <div>*</div>
+                <div>https://www.abbott.com/corpnewsroom.html</div>
+                <div>true</div>
+                <div>true</div>
+                <div>overview</div>
+                <div>Learn more about glucose trends</div>
+                <div>External Link Confirmation</div>
+                <div>default</div>
+                <div>/content/experience-fragments/adc/en/modal/redirect</div>
+                <div>abt-icon-info</div>
+                <div>adc-link-sample</div>
+                <div>link__text-align--left</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Card Block (AEM Composite Match)</h2>
+            <div class="adc-card block">
+                <div>default</div>
+                <div>adc-card-sample</div>
+                <div></div>
+                <div><img src="https://picsum.photos/seed/adc-card-main/1200/640" alt="Card hero image"></div>
+                <div>Card hero image</div>
+                <div><img src="https://picsum.photos/seed/adc-card-logo/200/70" alt="Card logo"></div>
+                <div>Card logo</div>
+                <div>Card title rendered via inline text component contract</div>
+                <div>This card body includes image, logo, inline text, and link markup generated automatically from one card block.</div>
+                <div>Support label</div>
+                <div>Explore details</div>
+                <div>https://www.abbott.com</div>
+                <div>_blank</div>
+                <div>true</div>
+                <div>true</div>
+                <div>true</div>
+                <div>*</div>
+                <div>https://www.abbott.com/corpnewsroom.html</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Cards Block (Direct EDS Content)</h2>
+            <div class="adc-cards block">
+                <div>
+                    <div><img src="https://picsum.photos/seed/adc-card-1/800/420" alt="Card image 1"></div>
+                    <div><img src="https://picsum.photos/seed/adc-logo-1/180/48" alt="Card logo 1"></div>
+                    <div>Patient support</div>
+                    <div>Living with diabetes resources</div>
+                    <div>Guidance and practical tools for people recently diagnosed with diabetes.</div>
+                    <div><a href="https://www.abbott.com" target="_blank" rel="noopener noreferrer">Learn more</a></div>
+                </div>
+                <div>
+                    <div><img src="https://picsum.photos/seed/adc-card-2/800/420" alt="Card image 2"></div>
+                    <div><img src="https://picsum.photos/seed/adc-logo-2/180/48" alt="Card logo 2"></div>
+                    <div>Community stories</div>
+                    <div>Real patient journeys</div>
+                    <div>Explore stories from people managing glucose insights in everyday life.</div>
+                    <div><a href="/content/adc/us/en/home.html">Read stories</a></div>
+                </div>
+                <div>
+                    <div><img src="https://picsum.photos/seed/adc-card-3/800/420" alt="Card image 3"></div>
+                    <div><img src="https://picsum.photos/seed/adc-logo-3/180/48" alt="Card logo 3"></div>
+                    <div>Caregiver tools</div>
+                    <div>Support for families and caregivers</div>
+                    <div>Helpful planning resources and education for caregivers supporting treatment.</div>
+                    <div><a href="https://www.abbott.com/corpnewsroom.html" target="_blank" rel="noopener noreferrer">See resources</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Card Carousel Block (Sling Model Exporter)</h2>
+            <div class="adc-card-carousel block" data-source="http://localhost:4502/content/adc/webu/global-reference/components/card-carousel/jcr:content/root/cardcarousel_copy.model.json"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>Video Playlist Block (Authored Exporter Endpoint)</h2>
+            <div class="adc-video-playlist block" data-source="http://localhost:4502/content/adc/webu/global-reference/components/video-playlist/jcr:content/root/videoplaylist.model.json"></div>
+        </div>
+    </main>
+    
+    <script>
+        // Load block scripts dynamically
+        const blockScripts = [
+            '/blocks/adc-logo/adc-logo.js',
+            '/blocks/adc-image/adc-image.js',
+            '/blocks/adc-inline-text-title/adc-inline-text-title.js',
+            '/blocks/adc-link/adc-link.js',
+            '/blocks/adc-card/adc-card.js',
+            '/blocks/adc-cards/adc-cards.js',
+            '/blocks/adc-card-carousel/adc-card-carousel.js',
+            '/blocks/adc-video-playlist/adc-video-playlist.js'
+        ];
+        
+        blockScripts.forEach(script => {
+            const el = document.createElement('script');
+            el.type = 'module';
+            el.src = script;
+            document.head.appendChild(el);
+        });
+        
+        // Wait for scripts then manually decorate blocks
+        setTimeout(async () => {
+            const blocks = document.querySelectorAll('.adc-logo, .adc-image, .adc-inline-text-title, .adc-link, .adc-card, .adc-cards, .adc-card-carousel, .adc-video-playlist');
+            
+            for (const block of blocks) {
+                const blockName = block.className.split(' ')[0];
+                
+                try {
+                    // Load CSS
+                    const cssPath = `/blocks/${blockName}/${blockName}.css`;
+                    const cssLink = document.createElement('link');
+                    cssLink.rel = 'stylesheet';
+                    cssLink.href = cssPath;
+                    document.head.appendChild(cssLink);
+                    
+                    // Load and execute JS module
+                    const jsPath = `/blocks/${blockName}/${blockName}.js`;
+                    const mod = await import(jsPath);
+                    
+                    if (mod.default && typeof mod.default === 'function') {
+                        await mod.default(block);
+                    }
+                } catch (error) {
+                    // Keep minimal signal in browser console without cluttering UI.
+                    // eslint-disable-next-line no-console
+                    console.error(`Error decorating ${blockName}:`, error);
+                }
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

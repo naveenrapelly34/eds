@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Block Test</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/blocks/hero/hero.css">
+  <style>
+    body { margin: 0; background: #eee; font-family: Arial, sans-serif; }
+    h3 { margin: 1rem; color: #333; }
+  </style>
+</head>
+<body>
+  <main>
+    <h3>Tall Hero (size=tall)</h3>
+    <!-- Mimics UE key-value block output for a tall hero with background image -->
+    <div class="hero block" data-block-name="hero" data-block-status="loaded">
+      <div><div>size</div><div>tall</div></div>
+      <div><div>desktopImage</div><div><picture><source media="(max-width:767px)" srcset="https://picsum.photos/seed/hero-m/800/560"><source media="(max-width:1023px)" srcset="https://picsum.photos/seed/hero-t/1200/640"><img src="https://picsum.photos/seed/hero-d/1600/640" alt="Test hero" loading="eager"></picture></div></div>
+      <div><div>alt</div><div>Test hero background</div></div>
+      <div><div>title</div><div><strong>Advancing Diabetes Care</strong></div></div>
+      <div><div>subtitle</div><div>Making a real difference in patients' lives</div></div>
+      <div><div>description</div><div>Abbott is dedicated to helping people living with diabetes.</div></div>
+      <div><div>overlappAsset</div><div>disabled</div></div>
+      <div><div>button1Label</div><div>Learn More</div></div>
+      <div><div>button1Link</div><div><a href="#">Learn More</a></div></div>
+      <div><div>button1Action</div><div>_self</div></div>
+      <div><div>button1Style</div><div>primary</div></div>
+      <div><div>button2Label</div><div>Contact Us</div></div>
+      <div><div>button2Link</div><div><a href="#">Contact Us</a></div></div>
+      <div><div>button2Action</div><div>_self</div></div>
+      <div><div>button2Style</div><div>secondary</div></div>
+    </div>
+  </main>
+  <script type="module">
+    import decorate from '/blocks/hero/hero.js';
+    const block = document.querySelector('.hero.block');
+    decorate(block);
+  </script>
+</body>
+</html>
